@@ -1,0 +1,11 @@
+<h3>Users Component</h3>
+<app-user-add></app-user-add>
+<br>
+<!--{{name}}-->
+<!-- <div *ngIf="users.length>0; else noUsers"> -->
+<app-user *ngFor="let user of users | async" [name]="user.username"></app-user>
+
+<!-- </div> -->
+<ng-template #noUsers>
+    <p>No Users</p>
+</ng-template>
